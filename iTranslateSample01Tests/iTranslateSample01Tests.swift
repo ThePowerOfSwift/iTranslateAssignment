@@ -10,25 +10,61 @@ import XCTest
 @testable import iTranslateSample01
 
 class iTranslateSample01Tests: XCTestCase {
-
+    
+    var persistenceManager: PersistenceManager!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        self.persistenceManager = PersistenceManager.sharedInstance
     }
+    
+    //MARK: - Test Save Context
+    func testSaveContext() {
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        let records = Records(context: persistenceManager.context)
+        records.recordId = UUID().uuidString
+        records.recordName = "iTranslate \(1)"
+        records.recorderFilePath = "iTranslate \(UUID().uuidString).m4a"
+        records.recordDuration = "00:00"
+        records.recordedDate = Date()
+        records.lasteUpdated = Date()
+        
+        persistenceManager.saveContext()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    //MARK: - Test Delete Context With Query
+    
+    func testDeleteContext() {
+        
+        let deleted =  persistenceManager.deleteContext(Records.self, objectId: "HDK2-EKREK-AFDK-3JKFE2")
+        XCTAssertTrue(deleted)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    //MARK: - Test Fetch Context
+    
+    func testFetchContext() {
+        let records = persistenceManager.fetchContexts(Records.self)
+        XCTAssertEqual(records.count, 0)
+    }
+    
+    //MARK: - Test Recording View Model
+    
+    func testRecordingViewModel() {
+       
+        let records: Records = Records(context: persistenceManager.context)
+        records.recordId = UUID().uuidString
+        records.recordName = "iTranslate 2"
+        records.recorderFilePath = "iTranslate 2.m4a"
+        records.recordDuration = "00:00"
+        records.recordedDate = Date()
+        records.lasteUpdated = Date()
+        
+        let recordingviewModel: RecordingViewModel = RecordingViewModel(records: records)
+        
+        XCTAssertEqual(records.recordId, recordingviewModel.recordingId)
+        XCTAssertEqual(records.recordName, recordingviewModel.recordingName)
+        XCTAssertEqual(records.recorderFilePath, recordingviewModel.recordingFilePath)
+        XCTAssertEqual(records.recordDuration, recordingviewModel.recordingDuration)
     }
 
 }

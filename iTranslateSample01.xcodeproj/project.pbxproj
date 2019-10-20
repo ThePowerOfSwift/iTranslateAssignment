@@ -25,13 +25,10 @@
 		D0B89386235AF54D002DE6E9 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B89385235AF54D002DE6E9 /* RecordingController.swift */; };
 		D0B89388235AF57C002DE6E9 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B89387235AF57C002DE6E9 /* BaseController.swift */; };
 		D2D777CB22CDCC1100427FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D777CA22CDCC1100427FC0 /* AppDelegate.swift */; };
-		D2D777CD22CDCC1100427FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D777CC22CDCC1100427FC0 /* ViewController.swift */; };
-		D2D777D022CDCC1100427FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D777CE22CDCC1100427FC0 /* Main.storyboard */; };
 		D2D777D222CDCC1200427FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D777D122CDCC1200427FC0 /* Assets.xcassets */; };
 		D2D777D522CDCC1200427FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D777D322CDCC1200427FC0 /* LaunchScreen.storyboard */; };
 		D2D777E022CDCC1300427FC0 /* iTranslateSample01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D777DF22CDCC1300427FC0 /* iTranslateSample01Tests.swift */; };
 		D2D777EB22CDCC1300427FC0 /* iTranslateSample01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D777EA22CDCC1300427FC0 /* iTranslateSample01UITests.swift */; };
-		D2D777F922CDCC8100427FC0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D777F822CDCC8100427FC0 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +68,6 @@
 		D0B89387235AF57C002DE6E9 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D2D777C722CDCC1100427FC0 /* iTranslateSample01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTranslateSample01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D777CA22CDCC1100427FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2D777CC22CDCC1100427FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D2D777CF22CDCC1100427FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2D777D122CDCC1200427FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2D777D422CDCC1200427FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2D777D622CDCC1200427FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +77,6 @@
 		D2D777E622CDCC1300427FC0 /* iTranslateSample01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTranslateSample01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D777EA22CDCC1300427FC0 /* iTranslateSample01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTranslateSample01UITests.swift; sourceTree = "<group>"; };
 		D2D777EC22CDCC1300427FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2D777F822CDCC8100427FC0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +147,6 @@
 				D0B89385235AF54D002DE6E9 /* RecordingController.swift */,
 				D09BAD98235AFF9300DE1782 /* RecordingPermissionController.swift */,
 				D09BAD9C235B151100DE1782 /* ShowRecordingController.swift */,
-				D2D777CC22CDCC1100427FC0 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,7 +154,6 @@
 		D0B8937A235AED64002DE6E9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D2D777F822CDCC8100427FC0 /* ViewModel.swift */,
 				D09BADD0235C2AC600DE1782 /* RecordingViewModel.swift */,
 			);
 			path = ViewModel;
@@ -180,7 +172,6 @@
 			children = (
 				D2D777D622CDCC1200427FC0 /* Info.plist */,
 				D2D777D322CDCC1200427FC0 /* LaunchScreen.storyboard */,
-				D2D777CE22CDCC1100427FC0 /* Main.storyboard */,
 				D2D777D122CDCC1200427FC0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -373,7 +364,6 @@
 			files = (
 				D2D777D522CDCC1200427FC0 /* LaunchScreen.storyboard in Resources */,
 				D2D777D222CDCC1200427FC0 /* Assets.xcassets in Resources */,
-				D2D777D022CDCC1100427FC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09BADE4235C398300DE1782 /* HelperExtensions.swift in Sources */,
-				D2D777CD22CDCC1100427FC0 /* ViewController.swift in Sources */,
 				D0B89384235AF16C002DE6E9 /* RecordingView.swift in Sources */,
 				D09BADF8235CBE8500DE1782 /* RecordingCell.swift in Sources */,
 				D09BAD99235AFF9300DE1782 /* RecordingPermissionController.swift in Sources */,
@@ -412,7 +401,6 @@
 				D0B89382235AEE39002DE6E9 /* PulseLayer.swift in Sources */,
 				D09BADF5235C4D5300DE1782 /* Records+CoreDataClass.swift in Sources */,
 				D09BAD9B235AFFB100DE1782 /* PermissionView.swift in Sources */,
-				D2D777F922CDCC8100427FC0 /* ViewModel.swift in Sources */,
 				D2D777CB22CDCC1100427FC0 /* AppDelegate.swift in Sources */,
 				D0B89386235AF54D002DE6E9 /* RecordingController.swift in Sources */,
 				D09BAD97235AFA3400DE1782 /* BaseView.swift in Sources */,
@@ -453,14 +441,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D2D777CE22CDCC1100427FC0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D2D777CF22CDCC1100427FC0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D2D777D322CDCC1200427FC0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
