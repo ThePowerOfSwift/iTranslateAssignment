@@ -23,7 +23,7 @@
 
 ### Instruction to Instruction
 - Clone the project, open in Xcode and hit run.
-- If you want to run it on a real device, set up and team in Signing Capabilities.
+- If you want to run this on a real device, set up a team in Signing Capabilities.
 - No any third party libraries used.
 
 ### About the project
