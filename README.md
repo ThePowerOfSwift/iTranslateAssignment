@@ -21,7 +21,7 @@
 
 [image-1]:	https://magnum.travis-ci.com/sonicomobile/itranslate-pro.svg?token=QnaayqyE2hhTeeq3zWi7
 
-### Instruction to Run
+### Instructions to Run
 - Clone the project, open in Xcode and hit run.
 - If you want to run this on a real device, set up a team in Signing Capabilities.
 - No any third party libraries used.
