@@ -15,6 +15,7 @@ class RecordingHelper: NSObject {
     private var audioRecorder: AVAudioRecorder!
     private var persistenceManager: PersistenceManager!
     
+    private var _recordinId: String?
     private var _filename: String?
     private var _filepath: URL?
     private var _filepathname: String?
@@ -52,10 +53,12 @@ extension RecordingHelper {
         if audioRecorder == nil {
             recordStartStopCallBack!(true)
 
+            _recordinId = CommonHelper.sharedInstance.getRandomGUID()
+            
             let numberofRecords = persistenceManager.fetchContextCount(Records.self)
             let directory = CommonHelper.sharedInstance.getDirectory()
             _filename = "Recording \(numberofRecords + 1)"
-            _filepathname = "Recording\(numberofRecords + 1).m4a"
+            _filepathname = "\(_recordinId!).m4a"
             _filepath = directory.appendingPathComponent(_filepathname!)
             
             let settings = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey: 12000, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
@@ -102,7 +105,7 @@ extension RecordingHelper: AVAudioRecorderDelegate {
 extension RecordingHelper {
     private func addRecording(completion: @escaping() -> ()) {
         let newRecording = Records(context: persistenceManager.context)
-        newRecording.recordId = CommonHelper.sharedInstance.getRandomGUID()
+        newRecording.recordId = _recordinId
         newRecording.recordName = _filename
         newRecording.recorderFilePath = _filepathname
         newRecording.recordDuration = getTimeDuration()

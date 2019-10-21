@@ -113,6 +113,7 @@ extension RecordingView {
 extension RecordingView {
     @objc private func tapToRecord(_ recognizer: UITapGestureRecognizer) {
         
+        self.showrecordingButton.isEnabled = false
         let (ispermited, denied) = recordingHelper.checkMicrophonePermission()
         if !ispermited {
             ispermissionAllowedCallBack!(ispermited, denied)
@@ -125,6 +126,7 @@ extension RecordingView {
                 return
             }
             
+            self?.showrecordingButton.isEnabled = true
             self?.remomoveAnimation()
             return
         }
