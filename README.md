@@ -20,3 +20,21 @@
 [6]:	http://nshipster.com/swift-documentation/
 
 [image-1]:	https://magnum.travis-ci.com/sonicomobile/itranslate-pro.svg?token=QnaayqyE2hhTeeq3zWi7
+
+### Instruction to Instruction
+- Clone the project, open in Xcode and hit run.
+- If you want to run it on a real device, set up and team in Signing Capabilities.
+- No any third party libraries used.
+
+### About the project
+- Used only programmatic UI (No Storyboards).
+- Used Architectural Pattern - MVVM
+- Core Data Used to keep the track of Recordings.
+- Unit Test - ✔️ Done (not 100 %)
+- UI Test - ✖️
+
+### If need any assistance
+- Please contact me by mail (caldera.ca.90@gmail.com or anuradhtuck@gmail.com)
+- By Phone +94704420948 or +15738444268
+
+# Thank You
